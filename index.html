@@ -30,24 +30,35 @@
         }
 
         header h1:first-of-type {
-            font-size: 28px; /* Keep "Royal Group" larger */
-            margin: 0 0 40px; /* Increase bottom margin for spacing */
+            font-size: 28px;
+            margin: 0 0 40px;
             font-family: "Arial", sans-serif;
             font-weight: bold;
             letter-spacing: 1px;
         }
 
-        .section-title {
-            font-size: 20px; /* Smaller than "Royal Group" */
-            margin: 0;
-            font-weight: bold;
-            color: #ddd;
+        /* Unique Frame Styling */
+        .unique-frame {
+            margin: 20px auto;
+            padding: 40px 20px; /* Increased padding for more height */
+            background: rgba(255, 255, 255, 0.1); /* Background remains consistent */
+            border: 5px dashed white; /* Larger dashed border */
+            border-radius: 10px;
+            width: 80%;
+            max-width: 600px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
         }
 
-        .welcome-text {
-            font-size: 20px; /* Same size as "Table Soccer Tournament" */
-            margin-bottom: 20px; /* Slightly increased spacing */
-            color: #ddd;
+        .unique-frame h2, .unique-frame p {
+            font-size: 20px; /* Make both texts the same size */
+            margin: 0;
+            color: white; /* Keep white text */
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7); /* Adds subtle depth */
+        }
+
+        .unique-frame h2 {
+            margin-bottom: 20px; /* Added margin to create space between h2 and p */
         }
 
         /* Rules Section */
@@ -55,14 +66,14 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin: 10px 0; /* Reduce space between the title and the boxes */
+            margin: 10px 0;
         }
 
         .rule {
-            margin: 40px 0; /* Bring boxes closer to the title */
+            margin: 40px 0;
             padding: 15px;
             background: rgba(255, 255, 255, 0.1);
-            border: 3px solid white; /* Increase the border thickness */
+            border: 3px solid white; /* Solid border for other frames */
             border-radius: 10px;
             width: 80%;
             max-width: 600px;
@@ -71,20 +82,20 @@
 
         .rule h3 {
             margin: 0 0 20px;
-            font-size: 28px; /* Increased size for round titles */
+            font-size: 28px;
             font-weight: bold;
             text-align: center;
         }
 
         .rule .subtitle {
             margin: 10px 0 40px;
-            font-size: 18px;
+            font-size: 20px; /* Made consistent size */
             font-weight: normal;
             color: #ddd;
         }
 
         .rule .subtitle br {
-            line-height: 2.5; /* Add space between Arabic and English */
+            line-height: 2.5;
         }
 
         .rule video {
@@ -97,6 +108,7 @@
 
         .rule p {
             margin: 40px 0 0;
+            font-size: 18px; /* Consistent text size */
         }
 
         /* Footer Styling */
@@ -119,23 +131,12 @@
             header h1 {
                 font-size: 20px;
             }
+
+            .unique-frame {
+                width: 90%;
+            }
         }
     </style>
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const videos = document.querySelectorAll("video");
-
-            videos.forEach(video => {
-                video.addEventListener("play", () => {
-                    videos.forEach(otherVideo => {
-                        if (otherVideo !== video) {
-                            otherVideo.pause();
-                        }
-                    });
-                });
-            });
-        });
-    </script>
 </head>
 <body>
     <!-- Header Section -->
@@ -146,9 +147,11 @@
         <h1>Royal Group</h1>
     </header>
 
-    <!-- Adjusted Text Order and Size -->
-    <h2 class="section-title">Table Soccer Tournament</h2>
-    <p class="welcome-text">Game Rules and Rounds</p>
+    <!-- Unique Frame Section -->
+    <div class="unique-frame">
+        <h2>Table Soccer Tournament</h2>
+        <p>Game Rules and Rounds</p>
+    </div>
 
     <!-- Rules Section -->
     <section class="rules-container">
@@ -187,7 +190,7 @@
         <div class="rule">
             <h3>Final</h3>
             <div class="subtitle">4 Goals (Combo/Bank/Kick/Goalkeeper)<br><br>أربعة أهداف (لاعب بلاعب/البنط/ جدا/حارس المرمى)</div>
-        <video controls>
+            <video controls>
                 <source src="round4.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
