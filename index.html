@@ -30,26 +30,24 @@
         }
 
         header h1:first-of-type {
-            font-size: 28px; /* Make "Royal Group" larger */
-            margin: 0 0 20px; /* Increase bottom margin for "Royal Group" */
-            font-family: "Arial", sans-serif;
-            font-weight: bold;
-            letter-spacing: 1px;
-        }
-
-        header h1:last-of-type {
-            font-size: 24px;
-            margin: 20px 0; /* Add top margin for "Table Soccer Tournament" */
+            font-size: 28px; /* Keep "Royal Group" larger */
+            margin: 0 0 40px; /* Increase bottom margin for spacing */
             font-family: "Arial", sans-serif;
             font-weight: bold;
             letter-spacing: 1px;
         }
 
         .section-title {
-            font-size: 24px; /* Reduce the size of "Game Rules and Rounds" */
-            margin: 60px 0 10px; /* Add more space above and reduce space below */
+            font-size: 20px; /* Smaller than "Royal Group" */
+            margin: 0;
             font-weight: bold;
-            color: #fff;
+            color: #ddd;
+        }
+
+        .welcome-text {
+            font-size: 20px; /* Same size as "Table Soccer Tournament" */
+            margin-bottom: 20px; /* Slightly increased spacing */
+            color: #ddd;
         }
 
         /* Rules Section */
@@ -73,7 +71,7 @@
 
         .rule h3 {
             margin: 0 0 20px;
-            font-size: 22px;
+            font-size: 28px; /* Increased size for round titles */
             font-weight: bold;
             text-align: center;
         }
@@ -83,6 +81,10 @@
             font-size: 18px;
             font-weight: normal;
             color: #ddd;
+        }
+
+        .rule .subtitle br {
+            line-height: 2.5; /* Add space between Arabic and English */
         }
 
         .rule video {
@@ -144,15 +146,15 @@
         <h1>Royal Group</h1>
     </header>
 
-    <!-- Section Title -->
+    <!-- Adjusted Text Order and Size -->
     <h2 class="section-title">Table Soccer Tournament</h2>
+    <p class="welcome-text">Game Rules and Rounds</p>
 
     <!-- Rules Section -->
     <section class="rules-container">
         <div class="rule">
             <h3>Round 1 & 2</h3>
-            <div class="subtitle">1 Goal (Combo)</div>
-            <div class="subtitle">هدف واحد (لاعب بلاعب)</div>
+            <div class="subtitle">1 Goal (Combo)<br><br>هدف واحد (لاعب بلاعب)</div>
 
             <video controls>
                 <source src="round1.mp4" type="video/mp4">
@@ -163,8 +165,7 @@
 
         <div class="rule">
             <h3>Round 3 & 4</h3>
-            <div class="subtitle">1 Goal (Bank Shot)</div>
-            <div class="subtitle">هدف واحد (تسديدة البنط)</div>
+            <div class="subtitle">1 Goal (Bank Shot)<br><br>هدف واحد (تسديدة البنط)</div>
             <video controls>
                 <source src="round2.mp4" type="video/mp4">
                 Your browser does not support the video tag.
@@ -174,8 +175,7 @@
         
         <div class="rule">
             <h3>Semi Final</h3>
-            <div class="subtitle">1 Goal (Kick Shot)</div>
-            <div class="subtitle">هدف واحد (تسديدة جدار)</div>
+            <div class="subtitle">1 Goal (Kick Shot)<br><br>هدف واحد (تسديدة جدار)</div>
 
             <video controls>
                 <source src="round3.mp4" type="video/mp4">
@@ -186,8 +186,7 @@
 
         <div class="rule">
             <h3>Final</h3>
-            <div class="subtitle">4 Goals (Combo/Bank/Kick/Goalkeeper)</div>
-           <div class="subtitle">أربعة أهداف (لاعب بلاعب/البنط/ جدا/حارس المرمى)</div>
+            <div class="subtitle">4 Goals (Combo/Bank/Kick/Goalkeeper)<br><br>أربعة أهداف (لاعب بلاعب/البنط/ جدا/حارس المرمى)</div>
         <video controls>
                 <source src="round4.mp4" type="video/mp4">
                 Your browser does not support the video tag.
